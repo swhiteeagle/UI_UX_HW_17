@@ -1,0 +1,174 @@
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .logo {
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+  }
+  
+  nav {
+    width: 73%;
+    padding: 1%;
+  }
+  
+  ul {
+    width: 50%;
+    margin-left: auto;
+  }
+  
+  .logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .heroImg {
+    height: 900px;
+    padding: 25px;
+  }
+  
+  .content {
+    width: 500px;
+    margin: 0 auto;
+  }
+  footer {
+    background-color: #373738;
+    padding: 20px;
+  }
+  
+  footer ul {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  footer li {
+    padding: 0 10px;
+  }
+  .mySkills {
+    padding: 50px 0;
+  }
+  
+  .flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .flexContainer > div {
+    width: 32%;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .flexContainer > div img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+
+<style>
+  /* Apply display: grid to the workGrid div */
+  .workGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Set the number of rows */
+    grid-template-columns: 1fr 1fr; /* Set the number of columns */
+    grid-template-areas: 
+      "workItem1 workItem2" /* Define the placement of each grid item */
+      "workItem3 workItem4";
+    gap: 20px; /* Set the gap between each grid item */
+  }
+  
+  /* Apply named grid areas to each grid item */
+  .workItem1 {
+    grid-area: workItem1;
+  }
+  
+  .workItem2 {
+    grid-area: workItem2;
+  }
+  
+  .workItem3 {
+    grid-area: workItem3;
+  }
+  
+  .workItem4 {
+    grid-area: workItem4;
+  }
+  
+  /* Add styles to each grid item */
+  .workItem2, .workItem4 {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .workItem2 h4, .workItem4 h4 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .workItem2 p, .workItem4 p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .workItem2 button, .workItem4 button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* Style the View all projects heading */
+  .myWork h3 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+</style>
+
+ 
+@media screen and (max-width: 600px) {
+      /* styles for mobile view */
+      .flexContainer {
+        flex-direction: column;
+      }
+      
+      .flexContainer > div {
+        width: 100%;
+      }
+      
+      .workGrid {
+        grid-template-areas: 
+          "img1"
+          "title1"
+          "description1"
+          "button1"
+          "img2"
+          "title2"
+          "description2"
+          "button2"
+          "viewAll";
+          
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: 1fr;
+      }
+    }
+    
+  }
+  
+  
